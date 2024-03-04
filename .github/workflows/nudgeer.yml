@@ -1,0 +1,18 @@
+name: 'Check security by Nudgeer'
+
+on:
+  pull_request:
+    types:
+      - opened
+
+jobs:
+  build:
+      name: check
+      runs-on: ubuntu-latest
+      steps:
+      - name: Check website
+        uses: onboardbase/nudgeer-action@v0.1.0
+        with:
+          gh_token: ${{secrets.GITHUB_TOKEN}}
+          domain: "https://kroking.dev"
+          wait: '10'
