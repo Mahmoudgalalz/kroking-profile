@@ -10,7 +10,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Check website
-        uses: onboardbase/nudgeer-action@v1.1
+        uses: onboardbase/nudgeer-action@v1.2
         with:
           domain: "https://kroking.dev"
           wait: '1000'
