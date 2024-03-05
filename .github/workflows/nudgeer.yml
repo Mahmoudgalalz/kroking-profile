@@ -2,8 +2,7 @@ name: 'Check security by Nudgeer'
 
 on:
   pull_request:
-    types:
-      - opened
+    types: [opened, edited]
 
 jobs:
   build:
@@ -11,7 +10,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
       - name: Check website
-        uses: onboardbase/nudgeer-action@v1
+        uses: onboardbase/nudgeer-action@v1.1
         with:
           domain: "https://kroking.dev"
-          wait: '10'
+          wait: '1000'
