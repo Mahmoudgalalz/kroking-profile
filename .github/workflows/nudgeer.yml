@@ -9,13 +9,9 @@ jobs:
   build:
       name: check
       runs-on: ubuntu-latest
-      permissions:
-        pull-requests: write
-        issues: write
       steps:
       - name: Check website
-        uses: onboardbase/nudgeer-action@v0.1.0
+        uses: onboardbase/nudgeer-action@v1
         with:
-          gh_token: ${{secrets.GITHUB_TOKEN}}
           domain: "https://kroking.dev"
           wait: '10'
